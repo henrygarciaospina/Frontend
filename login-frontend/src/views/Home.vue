@@ -12,10 +12,10 @@
 
     <div class="container mt-5">
       <div class="row d-flex justify-content-center">
-        <div class="col-3">
+        <div class="col-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">{{ user.name | capitalize }}</h5>
+              <h5 class="card-title">{{ user.nombre | capitalize }}</h5>
               <p class="card-text">Email: {{user.email}}</p>
             </div>
           </div>
@@ -56,9 +56,9 @@ export default {
   },
   filters: {
     capitalize: function (value) {
-      if (!value) return ''
-      value = value.toString()
-      return value.charAt(0).toUpperCase() + value.slice(1)
+      if (!value) return '';
+      value = value.toString();
+      return value.charAt(0).toUpperCase() + value.slice(1);
     }
   }
 }
